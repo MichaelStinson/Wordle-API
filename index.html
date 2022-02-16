@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Wordle API Demo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <p>
+        1. Enter your Key and create a new game<br/>
+        2. Using Key and Game ID from the New Game response, submit a Guess (5 letter word)<br/>
+        3. The Submit Guess response will indicate whether each letter was incorrect (0), correct (1), or fits the word but was in the wrong spot (2)<br/>
+        4. Guess until you win or run out of 6 guesses<br/>
+    </p>
+    <form>
+        <!-- set button onClick method to call function we defined passing input values as parameters -->
+        <table>
+          <tr>
+            <td><label>Key: </label></td>
+            <td><input type="text" id="key" size="40"></td>
+            <td><button type="button" style="width:200px" onclick="newGame(document.getElementById('key').value)">New Game</button></td>
+          </tr>
+          <tr>
+            <td><label>Game ID: </label></td>
+            <td><input type="text" id="game_id" size="40"></td>
+          </tr>
+          <tr>
+            <td><label>Guess: </label></td>
+            <td><input type="text" id="guess" size="40"></td>
+            
+          </tr>
+          <tr>
+            <td></td>
+            <td><button type="button" style="width:200px" onclick="submitGuess(document.getElementById('key').value, document.getElementById('game_id').value, document.getElementById('guess').value)">Submit Guess</button></td>
+          </tr>
+        </table>
+        <br/>
+    </form>
+    <div id="board-container">
+        <div id="board">
+        </div>
+    </div>
+    <h1>API Call</h1>
+    <p id="call"></p>
+    <br/>
+    <h1>Response</h1>
+    <p id="response"></p>
+</body>
+<script src="js/main.js"></script>
+</html>
