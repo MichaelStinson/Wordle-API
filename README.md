@@ -9,11 +9,11 @@
 - Data is stored in DynamoDB
 
 <br> **APIs**
-[newGame](https://github.com/MichaelStinson/Wordle-API/blob/main/lambda/new_game_lambda_function.py)
+<br>[newGame](https://github.com/MichaelStinson/Wordle-API/blob/main/lambda/new_game_lambda_function.py)
 - Accepts end user's key as input
 - Creates a new game
 - Responds with corresponding game ID
-[submitGuess](https://github.com/MichaelStinson/Wordle-API/blob/main/lambda/submit_guess_lambda_function.py)
+<br>[submitGuess](https://github.com/MichaelStinson/Wordle-API/blob/main/lambda/submit_guess_lambda_function.py)
 - Accepts end user's key, game ID, and guess as input 
 - Checks guess against the solution
 - Responds with feedback on accuracy of guess and whether the puzzle has been solved
